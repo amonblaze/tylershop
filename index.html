@@ -3,205 +3,290 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TylerShop — AI Destekli Dijital Ürünler</title>
+  <title>TylerShop — Profesyonel AI Ürünleri</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0a0a0a; color: #f0f0f0; line-height: 1.6; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-    a { color: inherit; text-decoration: none; }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #fafafa; color: #1a1a1a; line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 1200px; margin:0 auto; padding:0 32px; }
+    img, svg { max-width:100%; }
+
+    /* Nav */
+    .nav { padding:20px 0; position:sticky; top:0; z-index:100; background:rgba(250,250,250,.85); backdrop-filter:blur(20px); border-bottom:1px solid rgba(0,0,0,.06); }
+    .nav .container { display:flex; align-items:center; justify-content:space-between; }
+    .nav-logo { font-weight:800; font-size:1.3em; letter-spacing:-0.5px; }
+    .nav-logo span { color:#6366f1; }
+    .nav-cta { padding:10px 20px; border-radius:100px; background:#1a1a1a; color:#fff; font-weight:600; font-size:.9em; border:none; cursor:pointer; transition:.2s; }
+    .nav-cta:hover { background:#333; transform:translateY(-1px); }
 
     /* Hero */
-    .hero { text-align: center; padding: 80px 20px 60px; background: linear-gradient(135deg, #0a0a0a 0%, #1a1025 50%, #0a0a0a 100%); }
-    .hero h1 { font-size: 3em; font-weight: 900; margin-bottom: 10px; }
-    .hero .accent { color: #8b5cf6; }
-    .hero .subtitle { font-size: 1.3em; color: #aaa; margin-bottom: 30px; }
-    .hero .desc { max-width: 600px; margin: 0 auto 40px; color: #888; font-size: 1.1em; }
-    .btn { display: inline-block; padding: 14px 32px; border-radius: 12px; font-size: 1.05em; font-weight: 600; cursor: pointer; transition: all .2s; border: none; }
-    .btn-primary { background: #8b5cf6; color: #fff; }
-    .btn-primary:hover { background: #7c3aed; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(139,92,246,.3); }
-    .btn-outline { border: 2px solid #8b5cf6; color: #8b5cf6; background: transparent; }
-    .btn-outline:hover { background: rgba(139,92,246,.1); }
+    .hero { padding:120px 0 80px; text-align:center; }
+    .hero-badge { display:inline-block; padding:6px 16px; border-radius:100px; background:#eef2ff; color:#6366f1; font-weight:600; font-size:.85em; margin-bottom:24px; }
+    .hero h1 { font-size:clamp(2.5em, 6vw, 4em); font-weight:900; letter-spacing:-1.5px; line-height:1.15; margin-bottom:20px; }
+    .hero h1 span { color:#6366f1; }
+    .hero p { font-size:1.15em; color:#666; max-width:600px; margin:0 auto 40px; line-height:1.6; }
+    .btn { display:inline-flex; align-items:center; gap:8px; padding:16px 36px; border-radius:12px; font-size:1em; font-weight:600; cursor:pointer; transition:all .2s; border:none; text-decoration:none; }
+    .btn-primary { background:#1a1a1a; color:#fff; }
+    .btn-primary:hover { background:#333; transform:translateY(-2px); box-shadow:0 12px 30px rgba(0,0,0,.12); }
+    .btn-secondary { background:#fff; color:#1a1a1a; border:2px solid #e5e5e5; }
+    .btn-secondary:hover { border-color:#d0d0d0; }
+    .hero-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+    /* Stats */
+    .stats { padding:0 0 100px; }
+    .stats-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:#e5e5e5; border-radius:20px; overflow:hidden; }
+    .stat { background:#fff; padding:40px 32px; text-align:center; }
+    .stat .num { font-size:2.2em; font-weight:900; color:#6366f1; letter-spacing:-1px; line-height:1; }
+    .stat .label { color:#888; font-size:.9em; margin-top:8px; }
 
     /* Products */
-    .products { padding: 80px 0; }
-    .products h2 { text-align: center; font-size: 2.2em; margin-bottom: 50px; }
-    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-    .product-card { background: #141414; border: 1px solid #222; border-radius: 16px; padding: 35px; transition: all .3s; position: relative; }
-    .product-card:hover { border-color: #8b5cf6; transform: translateY(-4px); box-shadow: 0 12px 40px rgba(139,92,246,.15); }
-    .product-badge { position: absolute; top: -12px; right: 20px; background: #8b5cf6; color: #fff; padding: 5px 14px; border-radius: 20px; font-size: .8em; font-weight: 700; }
-    .product-card .icon { font-size: 2.5em; margin-bottom: 15px; }
-    .product-card h3 { font-size: 1.4em; margin-bottom: 8px; }
-    .product-card .price { font-size: 1.8em; font-weight: 900; color: #8b5cf6; margin: 15px 0; }
-    .product-card .price small { font-size: .5em; color: #666; font-weight: 400; }
-    .product-card .features { list-style: none; margin: 15px 0; }
-    .product-card .features li { padding: 5px 0; color: #aaa; font-size: .95em; }
-    .product-card .features li::before { content: "✓ "; color: #8b5cf6; font-weight: bold; }
+    .products { padding:0 0 120px; }
+    .section-head { text-align:center; margin-bottom:60px; }
+    .section-head h2 { font-size:2.4em; font-weight:800; letter-spacing:-1px; margin-bottom:12px; }
+    .section-head p { color:#888; font-size:1.1em; }
+    .product-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(350px, 1fr)); gap:24px; }
+    .product-card {
+      background:#fff; border:1px solid #eaeaea; border-radius:20px; padding:40px;
+      transition:all .3s; position:relative; overflow:hidden;
+    }
+    .product-card:hover { transform:translateY(-4px); box-shadow:0 20px 50px rgba(0,0,0,.08); border-color:#d0d0d0; }
+    .product-card.featured { border-color:#6366f1; border-width:2px; }
+    .product-badge { position:absolute; top:20px; right:20px; padding:6px 14px; border-radius:100px; background:#eef2ff; color:#6366f1; font-weight:700; font-size:.78em; }
+    .product-icon { width:48px; height:48px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:1.4em; margin-bottom:20px; }
+    .product-icon.purple { background:#eef2ff; }
+    .product-icon.amber { background:#fffbeb; }
+    .product-icon.emerald { background:#ecfdf5; }
+    .product-card h3 { font-size:1.25em; font-weight:700; margin-bottom:8px; letter-spacing:-0.3px; }
+    .product-card > p { color:#777; font-size:.95em; margin-bottom:20px; line-height:1.5; }
+    .price { font-size:2.2em; font-weight:900; color:#6366f1; margin:20px 0; letter-spacing:-1px; }
+    .price .currency { font-size:.45em; font-weight:500; color:#aaa; margin-left:4px; }
+    .features { list-style:none; margin:0 0 24px; display:grid; gap:8px; }
+    .features li { font-size:.9em; color:#666; display:flex; align-items:center; gap:10px; }
+    .features li svg { flex-shrink:0; }
+    .product-card .btn { width:100%; justify-content:center; }
 
-    /* How it works */
-    .how { background: #0d0d0d; padding: 80px 0; border-top: 1px solid #1a1a1a; border-bottom: 1px solid #1a1a1a; }
-    .how h2 { text-align: center; font-size: 2.2em; margin-bottom: 50px; }
-    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; }
-    .step { text-align: center; padding: 25px; }
-    .step .num { width: 50px; height: 50px; background: #8b5cf6; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-weight: 900; font-size: 1.3em; }
-    .step h4 { margin-bottom: 8px; }
-    .step p { color: #888; font-size: .9em; }
+    /* How */
+    .how { background:#fff; padding:100px 0; border-top:1px solid #f0f0f0; border-bottom:1px solid #f0f0f0; }
+    .steps { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:40px; }
+    .step { text-align:center; }
+    .step-icon { width:64px; height:64px; border-radius:20px; display:flex; align-items:center; justify-content:center; margin:0 auto 20px; font-size:1.5em; }
+    .step-icon.a { background:#eef2ff; }
+    .step-icon.b { background:#fffbeb; }
+    .step-icon.c { background:#ecfdf5; }
+    .step h4 { font-weight:700; font-size:1.05em; margin-bottom:6px; }
+    .step p { color:#888; font-size:.9em; line-height:1.5; max-width:280px; margin:0 auto; }
 
-    /* IBAN */
-    .iban { padding: 80px 0; text-align: center; }
-    .iban h2 { font-size: 2.2em; margin-bottom: 20px; }
-    .iban-box { background: #141414; border: 2px solid #8b5cf6; border-radius: 16px; padding: 30px; display: inline-block; max-width: 500px; }
-    .iban-box code { font-size: 1.4em; font-weight: 900; color: #8b5cf6; letter-spacing: 2px; }
+    /* CTA */
+    .cta { padding:120px 0; text-align:center; }
+    .cta h2 { font-size:2.2em; font-weight:800; letter-spacing:-1px; margin-bottom:12px; }
+    .cta p { color:#888; font-size:1.1em; margin-bottom:32px; }
 
     /* Footer */
-    footer { text-align: center; padding: 40px 20px; color: #555; font-size: .85em; border-top: 1px solid #1a1a1a; }
+    footer { padding:40px 0; border-top:1px solid #f0f0f0; }
+    footer .container { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
+    footer { color:#aaa; font-size:.85em; }
+    footer a { color:#6366f1; text-decoration:none; }
 
     /* Modal */
-    .modal-overlay { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.85); z-index:1000; display:flex; align-items:center; justify-content:center; padding:20px; }
-    .modal { background:#141414; border:1px solid #333; border-radius:16px; padding:35px; max-width:480px; width:100%; position:relative; max-height:90vh; overflow-y:auto; }
-    .modal-close { position:absolute; top:12px; right:16px; background:none; border:none; color:#888; font-size:1.4em; cursor:pointer; }
-    .modal-close:hover { color:#fff; }
-    .modal h2 { font-size:1.3em; margin-bottom:5px; }
-    .modal-price { font-size:1.6em; font-weight:900; color:#8b5cf6; }
+    .modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:1000; display:flex; align-items:center; justify-content:center; padding:20px; backdrop-filter:blur(4px); }
+    .modal { background:#fff; border-radius:24px; padding:40px; max-width:480px; width:100%; position:relative; box-shadow:0 30px 60px rgba(0,0,0,.15); }
+    .modal-close { position:absolute; top:16px; right:20px; background:none; border:none; color:#999; font-size:1.3em; cursor:pointer; width:36px; height:36px; border-radius:50%; display:flex; align-items:center; justify-content:center; }
+    .modal-close:hover { background:#f5f5f5; color:#333; }
+    .modal h2 { font-size:1.3em; font-weight:700; margin-bottom:4px; letter-spacing:-0.3px; }
+    .modal-price { font-size:2em; font-weight:900; color:#6366f1; letter-spacing:-1px; margin-bottom:4px; }
+    .modal input { width:100%; padding:14px 16px; border-radius:12px; border:2px solid #eaeaea; font-size:1em; font-family:inherit; margin-bottom:12px; transition:.2s; }
+    .modal input:focus { outline:none; border-color:#6366f1; }
+    .modal .btn { width:100%; justify-content:center; }
+    .iban-display { background:#fafafa; border:2px solid #eaeaea; border-radius:16px; padding:24px; margin:16px 0; }
+    .iban-display .label { font-size:.78em; color:#999; text-transform:uppercase; letter-spacing:.5px; font-weight:600; margin-bottom:4px; }
+    .iban-display code { font-size:1.3em; font-weight:800; color:#6366f1; letter-spacing:1px; word-break:break-all; }
+    .ref-code { background:#fffbeb; border:2px solid #fcd34d; border-radius:16px; padding:20px; text-align:center; margin:16px 0; }
+    .ref-code .label { font-size:.78em; color:#b45309; text-transform:uppercase; letter-spacing:.5px; font-weight:700; margin-bottom:6px; }
+    .ref-code code { font-size:1.4em; font-weight:900; color:#d97706; display:block; }
 
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 2em; }
-      .product-grid { grid-template-columns: 1fr; }
+    @media (max-width:768px) {
+      .hero { padding:80px 0 60px; }
+      .product-grid { grid-template-columns:1fr; }
+      .stats-grid { grid-template-columns:1fr; }
+      footer .container { flex-direction:column; text-align:center; }
+      .modal { padding:28px; }
+      .container { padding:0 20px; }
     }
   </style>
 </head>
 <body>
 
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-logo">Tyler<span>Shop</span></div>
+      <a href="#urunler" class="nav-cta">Ürünlere Göz At</a>
+    </div>
+  </nav>
+
   <header class="hero">
     <div class="container">
-      <h1>Tyler<span class="accent">Shop</span> 🐺</h1>
-      <p class="subtitle">AI Destekli Dijital Ürünler — Hemen İndir, Hemen Kullan</p>
-      <p class="desc">DeepSeek AI tarafından üretilmiş, test edilmiş, kullanıma hazır dijital ürünler. Türkiye'de doğrudan satın alabileceğiniz hiçbir yerde olmayan paketler.</p>
-      <a href="#urunler" class="btn btn-primary">Ürünlere Göz At →</a>
+      <div class="hero-badge">🇹🇷 AI Destekli Dijital Ürünler</div>
+      <h1>İşinizi <span>AI</span> ile Büyütün</h1>
+      <p>DeepSeek tarafından üretilmiş, test edilmiş, kullanıma hazır profesyonel dijital ürünler. Satın alın, indirin, hemen kullanmaya başlayın.</p>
+      <div class="hero-btns">
+        <a href="#urunler" class="btn btn-primary">Ürünlere Göz At →</a>
+        <a href="#nasil" class="btn btn-secondary">Nasıl Çalışır?</a>
+      </div>
     </div>
   </header>
 
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="num">250+</div>
+          <div class="label">Profesyonel AI Prompt'u</div>
+        </div>
+        <div class="stat">
+          <div class="num">30</div>
+          <div class="label">Hukuki Şablon</div>
+        </div>
+        <div class="stat">
+          <div class="num">3</div>
+          <div class="label">Ürün Kategorisi</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="products" id="urunler">
     <div class="container">
-      <h2>Ürünlerimiz</h2>
+      <div class="section-head">
+        <h2>Ürünler</h2>
+        <p>İhtiyacınız olan her şey, tek seferlik satın alma. Ömür boyu sizin.</p>
+      </div>
       <div class="product-grid">
 
-        <!-- 1. Prompt Pack -->
-        <div class="product-card">
+        <!-- Prompt Pack -->
+        <div class="product-card featured">
           <div class="product-badge">En Popüler</div>
-          <div class="icon">📝</div>
+          <div class="product-icon purple">📝</div>
           <h3>AI Prompt Pack — Sektörel Kütüphane</h3>
-          <p>Sektörünüze özel, test edilmiş 250 AI prompt'u. ChatGPT, DeepSeek, Claude ile maksimum verim alın.</p>
-          <div class="price">249 ₺ <small>5 sektör / 250 prompt</small></div>
+          <p>5 sektörde, titizlikle test edilmiş 250 prompt. ChatGPT, DeepSeek veya Claude'dan maksimum verim almanız için optimize edildi.</p>
+          <div class="price">249<span class="currency">₺</span></div>
           <ul class="features">
-            <li>E-Ticaret (50 prompt)</li>
-            <li>Freelancer İş Araçları (50 prompt)</li>
-            <li>Öğrenci & Akademisyen (50 prompt)</li>
-            <li>KOBİ İşletme Araçları (50 prompt)</li>
-            <li>Sosyal Medya Yönetimi (50 prompt)</li>
-            <li>Her prompt'da örnek çıktı + ipucu</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>E-Ticaret Satıcıları (50 prompt)</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Freelancer İş Araçları (50 prompt)</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Öğrenci & Akademisyen (50 prompt)</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>KOBİ İşletme Araçları (50 prompt)</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sosyal Medya Yönetimi (50 prompt)</li>
           </ul>
-          <a href="#" class="btn btn-primary" data-buy="prompt-pack" style="width:100%;text-align:center;margin-top:15px;">Satın Al →</a>
+          <a href="#" class="btn btn-primary" data-buy="prompt-pack">Satın Al</a>
         </div>
 
-        <!-- 2. E-Ticaret -->
+        <!-- Sözleşme -->
         <div class="product-card">
-          <div class="icon">🛒</div>
-          <h3>E-Ticaret Ürün Açıklama Üretici</h3>
-          <p>Trendyol, Hepsiburada, Amazon için DeepSeek destekli SEO uyumlu ürün açıklamaları.</p>
-          <div class="price">99 ₺ <small>50 ürün / dilediğin zaman kullan</small></div>
-          <ul class="features">
-            <li>SEO uyumlu açıklamalar</li>
-            <li>Toplu üretim (CSV ile batch)</li>
-            <li>Anında kopyala & kullan</li>
-            <li>Her platforma uygun format</li>
-            <li>3 ücretsiz deneme kullanımı</li>
-            <li>Sınırsız paket: 499 ₺/ay</li>
-          </ul>
-          <a href="eticaret/index.html" class="btn btn-outline" style="width:100%;text-align:center;margin-top:15px;">Ücretsiz Dene →</a>
-        </div>
-
-        <!-- 3. Sözleşmeler -->
-        <div class="product-card">
-          <div class="icon">📜</div>
+          <div class="product-icon amber">📜</div>
           <h3>Sözleşme & Dilekçe Şablon Paketi</h3>
-          <p>Türkiye mevzuatına uygun, doldurulabilir 30 hukuki şablon. Avukatsız hallet.</p>
-          <div class="price">199 ₺ <small>30 şablon / ömür boyu kullanım</small></div>
+          <p>Türkiye mevzuatına uygun, doldurulabilir 30 hukuki şablon. Her belgede ilgili kanun maddeleri ve kullanım kılavuzu mevcut.</p>
+          <div class="price">199<span class="currency">₺</span></div>
           <ul class="features">
-            <li>İş & Freelance Sözleşmeleri</li>
-            <li>Kira & Gayrimenkul Belgeleri</li>
-            <li>Dilekçe & İhtarname Örnekleri</li>
-            <li>E-Ticaret Hukuki Metinleri</li>
-            <li>Tüm kanun maddeleri ekli</li>
-            <li>Doldurulabilir format</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>İş & Freelance Sözleşmeleri (10 adet)</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Kira & Gayrimenkul (5 adet)</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Dilekçe & İhtarname (10 adet)</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>E-Ticaret Hukuki Metinleri (5 adet)</li>
           </ul>
-          <a href="#" class="btn btn-primary" data-buy="sozlesme-pack" style="width:100%;text-align:center;margin-top:15px;">Satın Al →</a>
+          <a href="#" class="btn btn-primary" data-buy="sozlesme-pack">Satın Al</a>
+        </div>
+
+        <!-- E-Ticaret -->
+        <div class="product-card">
+          <div class="product-icon emerald">🛒</div>
+          <h3>E-Ticaret Ürün Açıklama Üretici</h3>
+          <p>Trendyol, Hepsiburada, Amazon için DeepSeek destekli SEO uyumlu ürün açıklamaları. Toplu CSV ile yüzlerce ürünü dakikalar içinde hazırlayın.</p>
+          <div class="price">99<span class="currency">₺</span></div>
+          <ul class="features">
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>SEO uyumlu açıklamalar</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Toplu CSV ile batch üretim</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>3 ücretsiz deneme kullanımı</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.5 4.5L6 12L2.5 8.5" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sınırsız paket: 499 ₺/ay</li>
+          </ul>
+          <a href="eticaret/index.html" class="btn btn-secondary">Ücretsiz Dene</a>
         </div>
 
       </div>
     </div>
   </section>
 
-  <section class="how">
+  <section class="how" id="nasil">
     <div class="container">
-      <h2>Nasıl Satın Alınır?</h2>
+      <div class="section-head">
+        <h2>Nasıl Satın Alınır?</h2>
+        <p>Üç adımda ürününüz elinizde.</p>
+      </div>
       <div class="steps">
         <div class="step">
-          <div class="num">1</div>
-          <h4>Ürün Seç</h4>
-          <p>Yukarıdan istediğin ürünü seç, "Satın Al" butonuna tıkla.</p>
+          <div class="step-icon a">1</div>
+          <h4>Ürünü Seçin</h4>
+          <p>İhtiyacınız olan ürünü seçin, "Satın Al" butonuna tıklayın ve e-posta adresinizi girin.</p>
         </div>
         <div class="step">
-          <div class="num">2</div>
-          <h4>Havale Yap</h4>
-          <p>IBAN'a açıklamaya referans kodunu yazarak havale/EFT yap.</p>
+          <div class="step-icon b">2</div>
+          <h4>Havale / EFT Yapın</h4>
+          <p>Size verilen referans kodunu açıklamaya yazarak IBAN'a ödemenizi yapın.</p>
         </div>
         <div class="step">
-          <div class="num">3</div>
-          <h4>Onay & Teslimat</h4>
-          <p>Ödemen onaylanınca ürün e-posta veya WhatsApp'tan hemen gelir.</p>
+          <div class="step-icon c">3</div>
+          <h4>Ürününüz E-postada</h4>
+          <p>Ödemeniz onaylandıktan sonra ürününüz e-posta adresinize gönderilir.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="iban">
+  <section class="cta" id="satinal">
     <div class="container">
-      <h2>Ödeme Bilgileri</h2>
-      <p style="color:#aaa;margin-bottom:25px;">Havale/EFT yaparken açıklamaya <strong>referans kodunu</strong> yazmayı unutma!</p>
-      <div class="iban-box">
-        <p style="color:#888;font-size:.9em;margin-bottom:8px;">IBAN</p>
-        <code>TR00 0000 0000 0000 0000 0000 00</code>
-        <p style="color:#888;font-size:.85em;margin-top:12px;">Alıcı: TylerShop — Amon Blaze</p>
-        <p style="color:#8b5cf6;font-size:.8em;margin-top:8px;">⚠️ Açıklamaya referans kodunu yaz!</p>
-      </div>
+      <h2>Hemen Başlayın</h2>
+      <p>AI destekli profesyonel ürünlerle işinizi bir adım öteye taşıyın.</p>
+      <a href="#urunler" class="btn btn-primary">Ürünlere Göz At →</a>
     </div>
   </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 TylerShop. Tüm hakları saklıdır.</p>
+      <p>Hukuki şablonlar bilgilendirme amaçlıdır, hukuki tavsiye yerine geçmez.</p>
+    </div>
+  </footer>
 
   <!-- Checkout Modal -->
   <div class="modal-overlay" id="checkoutModal" style="display:none;">
     <div class="modal">
       <button class="modal-close" onclick="closeModal()">✕</button>
+      <p style="color:#888;font-size:.85em;font-weight:600;margin-bottom:4px;">TylerShop</p>
       <h2 id="modalProduct"></h2>
       <p class="modal-price" id="modalPrice"></p>
-      <hr style="border-color:#222;margin:20px 0;">
-      <p style="color:#aaa;font-size:.9em;margin-bottom:15px;">📧 Ürünü nereye gönderelim?</p>
-      <input type="email" id="customerEmail" placeholder="E-posta adresiniz" style="width:100%;padding:12px;border-radius:8px;border:1px solid #333;background:#0a0a0a;color:#fff;font-size:1em;margin-bottom:10px;">
-      <input type="text" id="customerName" placeholder="Adınız (opsiyonel)" style="width:100%;padding:12px;border-radius:8px;border:1px solid #333;background:#0a0a0a;color:#fff;font-size:1em;margin-bottom:20px;">
-      <button class="btn btn-primary" onclick="generateOrder()" style="width:100%;">Ödeme Bilgilerini Al →</button>
-      <div id="paymentInfo" style="display:none;margin-top:20px;">
-        <hr style="border-color:#222;margin:20px 0;">
-        <p style="font-weight:700;">💰 Havale/EFT Bilgileri</p>
-        <div style="background:#0a0a0a;border:2px solid #8b5cf6;border-radius:12px;padding:20px;margin:15px 0;">
-          <p style="color:#888;font-size:.8em;margin-bottom:5px;">IBAN</p>
-          <code id="ibanDisplay" style="font-size:1.2em;font-weight:900;color:#8b5cf6;word-break:break-all;"></code>
-          <p style="color:#888;font-size:.8em;margin-top:12px;">Alıcı: Amon Blaze</p>
+
+      <hr style="border:none;border-top:1px solid #eaeaea;margin:24px 0;">
+
+      <p style="font-size:.9em;font-weight:600;margin-bottom:12px;">📧 Ürün nereye gönderilsin?</p>
+      <input type="email" id="customerEmail" placeholder="E-posta adresiniz" autocomplete="email">
+      <button class="btn btn-primary" onclick="generateOrder()">Ödeme Bilgilerini Göster</button>
+
+      <div id="paymentInfo" style="display:none;margin-top:24px;">
+        <hr style="border:none;border-top:1px solid #eaeaea;margin-bottom:20px;">
+        <div class="iban-display">
+          <div class="label">IBAN</div>
+          <code id="ibanDisplay"></code>
+          <div style="margin-top:8px;color:#999;font-size:.85em;">Alıcı: Amon Blaze</div>
         </div>
-        <div style="background:#141414;border-radius:12px;padding:20px;margin:15px 0;">
-          <p style="color:#888;font-size:.8em;margin-bottom:5px;">⚠️ Referans Kodu (açıklamaya yazın)</p>
-          <code id="refDisplay" style="font-size:1.4em;font-weight:900;color:#f59e0b;background:#0a0a0a;padding:8px 16px;border-radius:8px;display:block;text-align:center;"></code>
+        <div class="ref-code">
+          <div class="label">⚡ Referans Kodu — Açıklamaya yazın</div>
+          <code id="refDisplay"></code>
         </div>
-        <p style="color:#aaa;font-size:.85em;margin:15px 0;">✅ Ödemeniz onaylandıktan sonra ürün <strong id="deliveryEmail"></strong> adresine gönderilecektir. (Genellikle 1-2 saat içinde)</p>
-        <p style="color:#666;font-size:.75em;">Sorunuz varsa WhatsApp: @amonblaze</p>
+        <p style="font-size:.9em;color:#666;line-height:1.5;">Ödemeniz onaylandıktan sonra ürün <strong id="deliveryEmail" style="color:#6366f1;"></strong> adresine gönderilecektir. Teslimat genellikle birkaç saat içinde gerçekleşir.</p>
+        <p style="font-size:.8em;color:#aaa;margin-top:8px;">Sorularınız için e-posta ile iletişime geçebilirsiniz.</p>
       </div>
     </div>
   </div>
@@ -214,7 +299,7 @@
       'eticaret-sinirsiz': { id:'eticaret-sinirsiz', name:'E-Ticaret Açıklama Üretici — Sınırsız Aylık', price:499 },
       'sozlesme-pack': { id:'sozlesme-pack', name:'Sözleşme & Dilekçe Şablon Paketi', price:199 }
     };
-    const IBAN = 'TR00 0000 0000 0000 0000 0000 00'; // TODO: gerçek IBAN
+    const IBAN = 'TR00 0000 0000 0000 0000 0000 00';
     let currentProduct = null;
 
     function openModal(productId) {
@@ -224,13 +309,8 @@
       document.getElementById('paymentInfo').style.display = 'none';
       document.getElementById('checkoutModal').style.display = 'flex';
       document.getElementById('customerEmail').value = '';
-      document.getElementById('customerName').value = '';
     }
-
-    function closeModal() {
-      document.getElementById('checkoutModal').style.display = 'none';
-    }
-
+    function closeModal() { document.getElementById('checkoutModal').style.display = 'none'; }
     function generateOrder() {
       const email = document.getElementById('customerEmail').value.trim();
       if (!email) { alert('Lütfen e-posta adresinizi girin.'); return; }
@@ -240,16 +320,13 @@
       document.getElementById('deliveryEmail').textContent = email;
       document.getElementById('paymentInfo').style.display = 'block';
     }
-
     document.querySelectorAll('[data-buy]').forEach(btn => {
       btn.addEventListener('click', e => { e.preventDefault(); openModal(btn.dataset.buy); });
     });
+    document.getElementById('checkoutModal').addEventListener('click', function(e) {
+      if (e.target === this) closeModal();
+    });
   </script>
-
-  <footer>
-    <p>© 2026 TylerShop — AI Destekli Dijital Ürünler. Tüm hakları saklıdır.</p>
-    <p style="margin-top:8px;">İletişim: WhatsApp @amonblaze | Hukuki uyarı: Şablonlar hukuki tavsiye yerine geçmez.</p>
-  </footer>
 
 </body>
 </html>

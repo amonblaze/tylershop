@@ -1,8 +1,12 @@
-# Sosyal Medya Yoneticileri Icin 50 Prompt Pack
+# 📱 Sosyal Medya Yöneticileri İçin 50 Prompt Pack
 
-KATEGORI 1: Post Caption & Metin Yazma (10 Prompt)
-===================================================
+> Bu pack ile Instagram'dan LinkedIn'e, TikTok'tan Twitter'a kadar tüm sosyal medya platformlarında içerik üretimini hızlandıracak 50 profesyonel prompt elinizin altında. Post caption'lar, hashtag stratejileri, içerik takvimleri, reklam metinleri ve etkileşim artırıcı fikirler — hepsi tek dosyada.
 
+---
+
+## 📝 KATEGORİ 1: Post Caption & Metin Yazma (10 Prompt)
+
+---
 
 ### Prompt 1: Instagram Feed - Hikayeli Caption
 
@@ -320,7 +324,9 @@ Bir moda markasi icin 4 slaytlik Instagram Stories etkilesim sticker dizisi yaz.
 
 ---
 
-KATEGORI 2: Hashtag & SEO Stratejisi (10 Prompt)
+## 🔍 KATEGORİ 2: Hashtag & SEO Stratejisi (10 Prompt)
+
+---
 
 ---
 
@@ -635,7 +641,9 @@ Bir sosyal medya ajansi icin Google Trends kullanarak trend analizi yapacak bir 
 
 ---
 
-KATEGORI 3: Icerik Takvimi & Planlama (10 Prompt)
+## 📅 KATEGORİ 3: İçerik Takvimi & Planlama (10 Prompt)
+
+---
 
 ---
 
@@ -956,7 +964,9 @@ Bir sosyal medya yoneticisi icin icerik geri donusum ve repurposing stratejisi h
 
 ---
 
-KATEGORI 4: Reklam Metinleri (10 Prompt)
+## 🎯 KATEGORİ 4: Reklam Metinleri (10 Prompt)
+
+---
 
 ---
 
@@ -1267,7 +1277,9 @@ Bir online giyim markasi icin SMS pazarlama metni yaz. (1) 160 karakteri gecmeye
 
 ---
 
-KATEGORI 5: Hikaye & Canli Yayin Fikirleri (10 Prompt)
+## 🎬 KATEGORİ 5: Hikaye & Canlı Yayın Fikirleri (10 Prompt)
+
+---
 
 ---
 

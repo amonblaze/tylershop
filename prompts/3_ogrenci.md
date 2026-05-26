@@ -798,6 +798,950 @@ Son 3 yılda TYT Fen Bilimleri'nde en çok çıkan konuları analiz et ve bir ç
 > [...4 slayt daha bu formatta devam eder...]
 >
 > **Slayt 8: Özet — Altın Kurallar** 
+> *İçerik:*
+> 1. Güçlü şifre kullanın (12+ karakter, büyük-küçük harf + rakam + sembol)
+> 2. İki faktörlü doğrulamayı açın
+> 3. Bilmediğiniz linklere tıklamayın
+> 4. Yazılımlarınızı güncel tutun
+> 5. Her hesap için farklı şifre kullanın
+> *Görsel:* 5 maddelik kontrol listesi simgesi
 >
 ---
 
+### Prompt 23: Proje Raporu Yazma
+
+**Prompt:**
+```
+Bir lisans bitirme projesi için final raporu yaz. Proje konusu: "Mobil uygulama ile kampüs içi kaybolan eşya takip sistemi." Rapor şu bölümleri içermeli: Proje özeti, Gereksinim analizi, Sistem tasarımı (kullanıcı arayüzü, veritabanı), Uygulama geliştirme süreci (kullanılan teknolojiler: Flutter, Firebase), Test sonuçları, Gelecek çalışmalar. Her bölüm için 1 paragraf yeterli.
+```
+
+**Kategori:** Ödev & Proje / Proje Raporu
+
+**Kullanım Amacı:** Bitirme veya dönem projesi raporu için şablon ve içerik oluşturmak.
+
+**Örnek Çıktı:**
+> **KAMPÜS KAYIP EŞYA TAKİP SİSTEMİ — PROJE FİNAL RAPORU**
+>
+> **1. Proje Özeti**
+> Bu proje kapsamında, üniversite kampüslerinde kaybolan eşyaların bildirilmesi ve sahiplerine ulaştırılması için bir mobil uygulama geliştirilmiştir. Uygulama, kullanıcıların kayıp veya buluntu eşya ilanı vermesine, eşyaların fotoğraflarını yüklemesine ve anlık bildirimlerle eşleşme sağlamasına olanak tanımaktadır.
+>
+> **2. Gereksinim Analizi**
+> Anket sonuçlarına göre öğrencilerin %82'si kampüste en az bir kez eşya kaybettiğini belirtmiştir. Mevcut çözümler (sosyal medya grupları, kampüs panoları) yetersiz kalmaktadır. Sistem gereksinimleri: fotoğraf yükleme, konum etiketleme, anlık bildirim, kullanıcı doğrulama.
+>
+> **3. Sistem Tasarımı**
+> Uygulama Flutter ile geliştirilmiş, veritabanı olarak Firebase kullanılmıştır. Kullanıcı arayüzünde üç ana ekran bulunmaktadır: Ana sayfa (ilan akışı), İlan oluşturma (kamera/gallery entegrasyonu), Profil sayfası. Veritabanı koleksiyon yapısı: users, lost_items, found_items, notifications.
+>
+> **4. Test Sonuçları**
+> 30 kişilik beta test grubuyla 2 hafta boyunca test edilmiştir. Ortalama yanıt süresi 4.2 saniye, kullanıcı memnuniyeti %88 olarak ölçülmüştür.
+>
+> **5. Gelecek Çalışmalar**
+> Yapay zeka destekli görsel eşleştirme, kampüs haritası entegrasyonu ve kurumsal hesaplarla entegrasyon planlanmaktadır.
+
+---
+
+### Prompt 24: Vaka Çalışması (Case Study) Analizi
+
+**Prompt:**
+```
+Bir işletme dersi için vaka çalışması analizi yaz. Vaka: "Bir e-ticaret şirketi, pandemi sonrası müşteri kaybı yaşıyor. Rakip analizine göre, rakipler 24 saat teslimat ve ücretsiz iade sunuyor. Şirketin mevcut teslimat süresi 3-5 gün, iade ücreti 20 TL." Bu vakayı SWOT analizi yaparak değerlendir. 3 stratejik öneri sun. Her önerinin artı ve eksilerini belirt.
+```
+
+**Kategori:** Ödev & Proje / Vaka Analizi
+
+**Kullanım Amacı:** İşletme, ekonomi ve yönetim dersleri için vaka analizi hazırlamak.
+
+**Örnek Çıktı:**
+> **VAKA ANALİZİ: E-TİCARET ŞİRKETİNİN MÜŞTERİ KAYBI SORUNU**
+>
+> **SWOT Analizi:**
+> | Güçlü Yönler | Zayıf Yönler |
+> |---|---|
+> | - Köklü marka bilinirliği | - Yavaş teslimat süresi |
+> | - Geniş ürün yelpazesi | - Ücretli iade politikası |
+> | - Sadık müşteri tabanı | - Dijital altyapı eksikliği |
+>
+> | Fırsatlar | Tehditler |
+> |---|---|
+> | - Pandemi sonrası e-ticaret büyümesi | - Artan rekabet |
+> | - Aynı gün teslimat trendi | - Müşteri beklentilerinin yükselmesi |
+>
+> **Stratejik Öneriler:**
+>
+> **Öneri 1: Lojistik Altyapı Yatırımı** — Artı: 24 saat teslimat sadakat artırır. Eksi: Yüksek maliyet.
+>
+> **Öneri 2: Ücretsiz İade Politikası** — Artı: Rakiplerle rekabet. Eksi: İade oranı artabilir.
+>
+> **Öneri 3: Sadakat Programı ile Farklılaşma** — Artı: Maliyet kontrolü. Eksi: Yeni müşteri için yetersiz.
+
+---
+
+### Prompt 25: Deney Raporu Yazma
+
+**Prompt:**
+```
+Bir fizik laboratuvar deney raporu yaz. Deney: "Basit Sarkaç ile Yerçekimi İvmesinin Hesaplanması." Rapor: Deneyin adı, Amaç, Teorik bilgi, Kullanılan malzemeler, Deneyin yapılışı, Veriler (tablo: L=50cm T=1.42s, L=80cm T=1.80s, L=100cm T=2.01s), Hesaplamalar (T=2π√(L/g)), Sonuç ve hata analizi. Deneysel değer ile teorik değer (g=9.81) arasındaki farkı yüzde hata olarak hesapla.
+```
+
+**Kategori:** Ödev & Proje / Deney Raporu
+
+**Kullanım Amacı:** Fen laboratuvar deney raporlarını bilimsel formatta hazırlamak.
+
+**Örnek Çıktı:**
+> **DENEY RAPORU: BASİT SARKAÇ İLE YERÇEKİMİ İVMESİ**
+>
+> **Amaç:** Basit sarkaç kullanarak yerçekimi ivmesini (g) hesaplamak.
+>
+> **Veriler:**
+> | L (cm) | L (m) | 10 Salınım (s) | Periyot T (s) |
+> |---|---|---|---|
+> | 50 | 0.50 | 14.2 | 1.42 |
+> | 80 | 0.80 | 18.0 | 1.80 |
+> | 100 | 1.00 | 20.1 | 2.01 |
+>
+> **Hesaplamalar:**
+> L=0.50: g = 4π²(0.50)/(1.42)² = 9.77 m/s²
+> L=0.80: g = 4π²(0.80)/(1.80)² = 9.75 m/s²
+> L=1.00: g = 4π²(1.00)/(2.01)² = 9.77 m/s²
+> Ortalama g = 9.76 m/s²
+>
+> **Yüzde Hata:** |9.76 - 9.81|/9.81 × 100 = **%0.51**
+>
+> **Sonuç:** Deneysel g değeri 9.76 m/s² bulunmuştur. %0.51'lik hata kabul edilebilir sınırlar içindedir. Olası hata kaynakları: kronometre kullanımı, hava sürtünmesi, ip esnemesi.
+
+---
+
+### Prompt 26: Kitap / Makale Eleştirisi Yazma
+
+**Prompt:**
+```
+George Orwell'in "1984" romanı için 500 kelimelik bir eleştiri yaz. Romanın ana temalarını (totaliterlik, gözetim, manipülasyon) analiz et. Günümüz dünyasıyla bağlantı kur (sosyal medya gözetimi, yalan haber, deepfake). Edebi açıdan dil ve anlatım özelliklerini değerlendir. Tarafsız bir dille yaz, hem güçlü hem zayıf yönleri belirt.
+```
+
+**Kategori:** Ödev & Proje / Eleştiri
+
+**Kullanım Amacı:** Edebiyat veya sosyal bilimler dersleri için kitap/makale eleştirisi hazırlamak.
+
+**Örnek Çıktı:**
+> **"1984" ROMANI ÜZERİNE ELEŞTİRİ**
+>
+> Orwell'in 1949'da yayımlanan distopik romanı "1984", totaliter bir rejimin birey üzerindeki mutlak kontrolünü anlatır. Büyük Birader, her an izleyen gözler ve "düşünce polisi" kavramları romanın en bilindik unsurlarıdır. Ancak romanı asıl değerli kılan, yayımlandığı dönemin çok ötesine geçen öngörüleridir. Bugün sosyal medya algoritmaları, yüz tanıma sistemleri ve devlet gözetim ağları Orwell'in kâbusunu gerçek kılmaktadır.
+>
+> Orwell'in yalın ama etkileyici dili distopik atmosferin güçlenmesinde kilit rol oynar. Winston Smith'in iç monologları, bireyin sistem karşısındaki çaresizliğini hissettirir. Ancak romanın ikinci yarısındaki "Goldstein kitabı" bölümü didaktik bir tona bürünerek akıcılığı bir miktar zedelemektedir. Yine de "1984", sadece bir roman değil, çağımızın en güçlü politik uyarılarından biridir.
+
+---
+
+### Prompt 27: İstatistik Projesi — Veri Analizi Raporu
+
+**Prompt:**
+```
+Bir istatistik dersi projesi için veri analizi raporu yaz. Veri: 50 öğrencinin final sınavı notları: 45, 62, 78, 91, 55, 67, 73, 88, 94, 52, 46, 71, 85, 59, 63, 77, 82, 90, 48, 66, 74, 87, 93, 56, 68, 72, 86, 95, 44, 61, 75, 84, 92, 50, 64, 76, 81, 89, 47, 69, 79, 83, 96, 43, 70, 80, 97, 49, 65, 60. Şu analizleri yap: aritmetik ortalama, medyan, mod, standart sapma, varyans, frekans tablosu (aralıklar: 40-49, 50-59 vb.). Yorumla.
+```
+
+**Kategori:** Ödev & Proje / Veri Analizi
+
+**Kullanım Amacı:** İstatistik projeleri için betimsel analiz raporu hazırlamak.
+
+**Örnek Çıktı:**
+> **VERİ ANALİZİ RAPORU**
+>
+> **Betimsel İstatistikler:**
+> - Ortalama: 71.2 | Medyan: 72.5 | Mod: 67
+> - Standart Sapma: 15.8 | Varyans: 249.6
+> - Min: 43 | Maks: 97 | Aralık: 54
+>
+> **Frekans Tablosu:**
+> | Aralık | f | % |
+> |--------|---|---|
+> | 40-49 | 4 | 8 |
+> | 50-59 | 6 | 12 |
+> | 60-69 | 12 | 24 |
+> | 70-79 | 14 | 28 |
+> | 80-89 | 8 | 16 |
+> | 90-100 | 6 | 12 |
+>
+> **Yorum:** Ortalama (71.2) ve medyan (72.5) birbirine yakın, dağılım simetriğe yakındır. En yüksek frekans %28 ile 70-79 aralığındadır. 60 altındaki öğrenci sayısı 10 (%20), çoğunluk başarılıdır.
+
+---
+
+### Prompt 28: Dönem Ödevi Kaynakça ve Dipnot Düzenleme
+
+**Prompt:**
+```
+Aşağıdaki kaynakları Chicago Manuel of Style (CMS) dipnot ve kaynakça formatına göre düzenle. İlk kullanımda tam dipnot, sonraki kullanımlarda kısaltılmış dipnot formatını da göster.
+
+1. Kitap: Umberto Eco, Anlatı Ormanlarında Altı Gezinti, çev. Kemal Atakay (İstanbul: Can Yayınları, 2020)
+2. Makale: Zeynep Tüfekçi, "Yapay Zeka ve Toplum", İletişim Araştırmaları Dergisi 15, no. 2 (2023): 45-68.
+3. Web: TDK, "Güncel Türkçe Sözlük", erişim 15 Mart 2025, https://sozluk.gov.tr
+```
+
+**Kategori:** Ödev & Proje / Kaynakça Formatı
+
+**Kullanım Amacı:** Dönem ödevlerinde Chicago formatında dipnot ve kaynakça düzenlemek.
+
+**Örnek Çıktı:**
+> **DİPNOT FORMATI (Chicago 17. Baskı)**
+>
+> **İlk Kullanım (Tam Dipnot):**
+> 1. Umberto Eco, *Anlatı Ormanlarında Altı Gezinti*, çev. Kemal Atakay (İstanbul: Can Yayınları, 2020), 45.
+> 2. Zeynep Tüfekçi, "Yapay Zeka ve Toplum," *İletişim Araştırmaları Dergisi* 15, no. 2 (2023): 52.
+> 3. TDK, "Güncel Türkçe Sözlük," erişim 15 Mart 2025, https://sozluk.gov.tr.
+>
+> **Sonraki Kullanım (Kısaltılmış Dipnot):**
+> 4. Eco, *Anlatı Ormanlarında*, 78.
+> 5. Tüfekçi, "Yapay Zeka," 60.
+> 6. TDK, "Güncel Türkçe Sözlük."
+>
+> **KAYNAKÇA:**
+> Eco, Umberto. *Anlatı Ormanlarında Altı Gezinti*. Çeviren Kemal Atakay. İstanbul: Can Yayınları, 2020.
+> Tüfekçi, Zeynep. "Yapay Zeka ve Toplum." *İletişim Araştırmaları Dergisi* 15, no. 2 (2023): 45-68.
+> TDK. "Güncel Türkçe Sözlük." Erişim 15 Mart 2025. https://sozluk.gov.tr.
+
+---
+
+### Prompt 29: Ödev Teslim E-postası ve Ön Yazı
+
+**Prompt:**
+```
+Bir üniversite öğrencisi olarak haftalık ödevi e-posta ile teslim ediyorsun. Prof. Dr. Ahmet Yılmaz'ın İşletme Yönetimi dersi için "Stratejik Yönetim" konulu bir ödev teslim edeceksin. Düzgün, resmi bir e-posta yaz. Öğrenci adın: Mehmet. Ödevin pdf halinde eklendiğini belirt. Ders: İşletme Yönetimi.
+```
+
+**Kategori:** Ödev & Proje / Akademik İletişim
+
+**Kullanım Amacı:** Ödev teslimi için profesyonel e-posta yazışması hazırlamak.
+
+**Örnek Çıktı:**
+> **Konu:** [İŞL301] Stratejik Yönetim Ödevi Teslimi — Mehmet Yıldırım
+>
+> Sayın Prof. Dr. Ahmet Yılmaz,
+>
+> İşletme Yönetimi dersi kapsamında hazırlamış olduğum "Stratejik Yönetim" konulu haftalık ödevimi ekte pdf olarak gönderiyorum. Ödevi hazırlarken derste işlediğimiz Porter'ın Beş Güç Modeli ve SWOT analizi yaklaşımlarını temel aldım.
+>
+> İyi çalışmalar dilerim.
+>
+> Saygılarımla,
+> Mehmet Yıldırım
+> Öğrenci No: 2023456789
+
+---
+
+### Prompt 30: Grup Projesi Görev Dağılım Tablosu
+
+**Prompt:**
+```
+Bir grup projesi için görev dağılımı tablosu ve zaman çizelgesi hazırla. Proje: "Sürdürülebilir kampüs projesi." 5 kişilik ekip: Ali (lider), Ayşe (araştırma), Mert (tasarım), Elif (sunum), Can (rapor). Proje süresi: 4 hafta. Her hafta için her kişinin ne yapacağını belirt. Haftalık kontrol noktaları (milestone) ekle.
+```
+
+**Kategori:** Ödev & Proje / Proje Yönetimi
+
+**Kullanım Amacı:** Grup projelerinde görev dağılımını ve zamanlamayı planlamak.
+
+**Örnek Çıktı:**
+> **GÖREV DAĞILIM TABLOSU**
+> | Üye | Rol | Sorumluluk |
+> |-----|-----|------------|
+> | Ali | Lider | Koordinasyon, son teslim |
+> | Ayşe | Araştırmacı | Literatür, anket, veri analizi |
+> | Mert | Tasarımcı | Poster, görsel içerik |
+> | Elif | Sunum Uzmanı | PowerPoint, video |
+> | Can | Rapor Sorumlusu | Yazım, kaynakça, format |
+>
+> **Zaman Çizelgesi:**
+> | Hafta | Ali | Ayşe | Mert | Elif | Can | Kilometre Taşı |
+> |-------|------|------|------|------|------|----------------|
+> | 1 | Görev dağılımı | Literatür taraması | Eskizler | Sunum planı | Taslak | Proje planı onayı |
+> | 2 | Toplantı | Anket | Görsel tasarım | Veri görselleştirme | Giriş | Veri toplama bitti |
+> | 3 | Kontrol | Analiz | Final tasarım | Prova | Bulgular | İçerik hazır |
+> | 4 | Son düzenleme | İnceleme | Baskı | Final sunum | Son kontroller | Teslim ✅ |
+
+---
+
+## 💼 KATEGORİ 4: Kariyer & CV
+
+---
+
+### Prompt 31: Etkili CV (Özgeçmiş) Yazma
+
+**Prompt:**
+```
+Yeni mezun bir bilgisayar mühendisi için etkili bir CV yaz. Mezuniyet: İstanbul Teknik Üniversitesi, 2024. Staj: Turkcell (3 ay, yazılım geliştirme), Softtech (2 ay, veri analizi). Yetenekler: Python, Java, SQL, Flutter, Git, Agile. Sertifikalar: Google Data Analytics, AWS Cloud Practitioner. Projeler: Mobil uygulama (1000+ indirme), Yapay zeka chatbot. İngilizce: İleri. CV formatı: Kişisel Bilgiler, Profesyonel Özet, Eğitim, Deneyim, Yetenekler, Sertifikalar, Projeler, Referanslar.
+```
+
+**Kategori:** Kariyer / CV
+
+**Kullanım Amacı:** İş başvuruları için profesyonel ve etkileyici bir CV hazırlamak.
+
+**Örnek Çıktı:**
+> **MEHMET KAYA — Bilgisayar Mühendisi**
+>
+> 📞 0555 123 45 67 | ✉️ mehmet.kaya@email.com
+>
+> **Profesyonel Özet:**
+> İTÜ Bilgisayar Mühendisliği mezunu (2024). Mobil uygulama ve yapay zeka alanlarında staj deneyimi. 1000+ kullanıcılı mobil uygulama geliştirmiştir.
+>
+> **Eğitim:** İTÜ (2020-2024) — GANO: 3.45
+> **Deneyim:** Turkcell — Stajyer (3 ay), Softtech — Stajyer (2 ay)
+> **Yetenekler:** Python, Java, SQL, Flutter, Git, Agile
+> **Sertifikalar:** Google Data Analytics, AWS Cloud Practitioner
+> **Projeler:** FitTracker (1000+ indirme), Akademik Chatbot
+>
+---
+
+### Prompt 32: Ön Yazı (Cover Letter) Hazırlama
+
+**Prompt:**
+```
+Trendyol'da Pazarlama Uzmanı pozisyonuna başvurmak için bir ön yazı yaz. Mezuniyet: Boğaziçi Üniversitesi İşletme, 2023. Deneyim: 1 yıl dijital pazarlama ajansı, Google Ads ve Meta reklam yönetimi. Başarı: 3 ayda müşteri dönüşüm oranını %25 artırdı. Neden Trendyol? Türkiye'nin lider e-ticaret platformu, inovatif pazarlama ekibi. 350 kelimeyi geçme.
+```
+
+**Kategori:** Kariyer / Ön Yazı
+
+**Kullanım Amacı:** İş başvurusu için pozisyona özel ön yazı hazırlamak.
+
+**Örnek Çıktı:**
+> **ÖN YAZI — Pazarlama Uzmanı, Trendyol**
+>
+> Sayın İnsan Kaynakları Yetkilisi,
+>
+> Trendyol'da Pazarlama Uzmanı pozisyonuna başvurmaktan heyecan duyuyorum. Boğaziçi Üniversitesi İşletme Bölümü'nden 2023 yılında mezun olduktan sonra bir dijital pazarlama ajansında Google Ads ve Meta reklam yönetimi alanında çalıştım. En önemli başarım, optimize ettiğim kampanyalarla 3 ay içinde dönüşüm oranını %25 artırmak oldu.
+>
+> Trendyol'u tercih etmemin nedeni, Türkiye'nin e-ticaret alanındaki en yenilikçi şirketlerinden biri olması. Veri odaklı pazarlama stratejilerimle ekibinize değer katacağıma inanıyorum.
+>
+> Görüşme fırsatı vermeniz halinde sizinle daha detaylı konuşmayı çok isterim.
+>
+> Saygılarımla,
+> Ayşe Yıldız
+
+---
+
+### Prompt 33: Staj Başvuru Yazısı
+
+**Prompt:**
+```
+Yazılım geliştirme stajı için Arçelik'e başvuru yazısı yaz. Öğrenci: 3. sınıf Bilgisayar Mühendisliği (ODTÜ). Projeler: Flutter mobil uygulama, IoT sensör sistemi. Yetenekler: Python, C++, Flutter, Firebase. Neden Arçelik? Ar-Ge merkezi, akıllı ev teknolojileri, yenilikçi vizyon. 250 kelime.
+```
+
+**Kategori:** Kariyer / Staj Başvurusu
+
+**Kullanım Amacı:** Staj başvurusu için etkili bir motivasyon mektubu hazırlamak.
+
+**Örnek Çıktı:**
+> **STAJ BAŞVURUSU — Yazılım Geliştirme Stajyeri**
+>
+> Sayın Arçelik İnsan Kaynakları Ekibi,
+>
+> ODTÜ Bilgisayar Mühendisliği 3. sınıf öğrencisi olarak Arçelik Ar-Ge Merkezi'nde yazılım geliştirme stajyeri pozisyonuna başvuruyorum. Akıllı ev teknolojileri ve IoT alanına duyduğum ilgi, sizin bu alandaki öncü çalışmalarınızla birleşince başvuru yapmaktan kendimi alamadım.
+>
+> Flutter ile geliştirdiğim FitTracker uygulaması 1000+ indirmeye ulaştı. Ayrıca IoT sensör sistemi projemde C++ ve Firebase kullandım. Arçelik'in akıllı ev vizyonuna teknik becerilerimle katkıda bulunabileceğime inanıyorum.
+>
+> Saygılarımla,
+> Ali Yıldırım
+
+---
+
+### Prompt 34: Mülakat Hazırlığı — Sık Sorulan Sorular
+
+**Prompt:**
+```
+Bir yazılım mühendisliği iş mülakatı için hazırlık yap. En sık sorulan 10 soruyu listele ve her biri için ideal cevap stratejisi ver. Soru türleri: Kendini tanıt (1 dk), güçlü/zayıf yönler, neden bu şirket, takım çalışması örneği, başarısızlık deneyimi, maaş beklentisi, 5 yıllık hedef. Her soru için: yanıt yapısı (örn: STAR yöntemi), örnek cevap ve kaçınılması gereken hatalar.
+```
+
+**Kategori:** Kariyer / Mülakat
+
+**Kullanım Amacı:** İş mülakatlarına yapılandırılmış şekilde hazırlanmak.
+
+**Örnek Çıktı:**
+> **1. Kendini Tanıt (1 dakika)**
+> *Yapı:* Geçmiş → Şimdi → Gelecek
+> *Cevap:* "Ben Ali, İTÜ Bilgisayar Mühendisliği mezunuyum. Staj dönemimde Turkcell'de mobil uygulama geliştirdim, şu anda Flutter üzerine uzmanlaşıyorum. Sizin şirketinizde bu becerilerimi ileri taşımak istiyorum."
+> *Kaçının:* Hayat hikâyesi anlatmaktan.
+>
+> **2. Güçlü ve Zayıf Yönleriniz?**
+> *Yapı:* Güçlü = gerçek bir yetenek + kanıt. Zayıf = geliştirmekte olduğunuz bir alan + aksiyon.
+> *Cevap:* "Güçlü yönüm hızlı öğrenme — yeni bir teknolojiyi 1 haftada projeye entegre edebilirim. Zayıf yönüm topluluk önünde konuşma, bunun için Toastmasters'a katıldım."
+>
+> [...8 soru daha bu formatta devam eder...]
+
+---
+
+### Prompt 35: LinkedIn Profil Optimizasyonu
+
+**Prompt:**
+```
+Bir üniversite öğrencisi için LinkedIn profilini optimize et. Öğrenci: İşletme 4. sınıf, pazarlama stajı yapmış, Google Analytics sertifikası var. Şu bölümleri yaz: Profesyonel başlık (başlık ve özet), Deneyim açıklamaları, Yetenekler bölümü, Öne çıkan projeler. Özette "veri odaklı pazarlama" ve "dijital dönüşüm" vurgusu yap. Etkili anahtar kelimeler kullan.
+```
+
+**Kategori:** Kariyer / LinkedIn
+
+**Kullanım Amacı:** LinkedIn profilini işverenlerin dikkatini çekecek şekilde düzenlemek.
+
+**Örnek Çıktı:**
+> **Profesyonel Başlık:** Pazarlama Stajyeri | Google Analytics Sertifikalı | Veri Odaklı Dijital Pazarlamacı
+>
+> **Hakkında (Özet):**
+> Boğaziçi Üniversitesi İşletme Bölümü son sınıf öğrencisiyim. Dijital pazarlama alanında 6 aylık staj deneyimim var. Google Analytics ve Meta reklam panellerinde uzmanlaştım. Veri odaklı karar alma ve kampanya optimizasyonu konularında tutkuluyum. Sürekli öğrenen, analitik düşünen ve takım çalışmasına yatkın bir pazarlamacı adayıyım.
+>
+> **Deneyim:**
+> XYZ Ajansı — Pazarlama Stajyeri
+> - Google Ads kampanyaları yönetti, %25 dönüşüm artışı sağladı
+> - Haftalık performans raporları hazırladı
+> - Sosyal medya içerik takvimi oluşturdu
+>
+> **Yetenekler:** Google Analytics, Meta Ads, SEO, Excel, Canva
+
+---
+
+### Prompt 36: Kişisel Gelişim Planı Oluşturma
+
+**Prompt:**
+```
+Bir üniversite öğrencisi için 1 aylık kişisel gelişim planı yap. Öğrenci: 2. sınıf, yazılıma ilgili, İngilizcesi orta düzey. Hedefler: İngilizce geliştirme, temel Python öğrenme, zaman yönetimi becerisi kazanma. Her hafta için günlük 1 saat çalışma programı hazırla.
+
+
+### Prompt 37: Mülakat Sonrası Teşekkür E-postası
+
+**Prompt:**
+```
+Bir iş mülakatı sonrası teşekkür e-postası yaz. Pozisyon: Pazarlama Uzmanı. Şirket: Trendyol. Mülakat yapan: İnsan Kaynakları Müdürü Ayşe Hanım. Mülakatta konuştuklarınız: sosyal medya stratejisi, veri analizi projeleri. 2 saat içinde göndermen gerekiyor. Kısa, samimi, profesyonel. Mülakatta duyduğun spesifik bir konuya atıf yap (sosyal medya stratejisi hakkında konuştuğunuz fikir).
+```
+
+**Kategori:** Kariyer / Mülakat
+
+**Kullanım Amacı:** İş mülakatı sonrası profesyonel teşekkür e-postası hazırlamak.
+
+**Örnek Çıktı:**
+> **Konu:** Teşekkür — Pazarlama Uzmanı Mülakatı
+>
+> Sayın Ayşe Hanım,
+>
+> Bugünkü mülakat için çok teşekkür ederim. Trendyol'un pazarlama ekibi ve sosyal medya stratejileri hakkında konuşmak benim için çok değerliydi. Özellikle paylaştığınız veri odaklı içerik planlaması yaklaşımı, kendi deneyimimle örtüşen bir alan.
+>
+> Konuşmamızda değindiğimiz influencer iş birliği stratejisi üzerine düşündüm ve birkaç fikrim var — görüşmek isterim. Fırsat vermeniz halinde ekibinize katkı sağlayabileceğime inanıyorum.
+>
+> Zaman ayırdığınız için tekrar teşekkür ederim.
+>
+> Saygılarımla,
+> Ayşe Yıldız
+
+---
+
+### Prompt 38: Yetenek / Beceri Geliştirme Planı
+
+**Prompt:**
+```
+Bir hukuk fakültesi öğrencisi için 3 aylık beceri geliştirme planı hazırla. Mevcut durum: 1. sınıfı bitirdi, İngilizcesi B1, yaz stajı yapacak. Hedefler: İngilizceyi B2'ye çıkarmak, hukuki terminoloji öğrenmek, diksiyon geliştirmek, CV'sini güçlendirecek sertifikalar almak. Haftalık program şeklinde yaz. Her hafta en az 1 somut çıktı (bitirilen kitap, alınan sertifika vb.) belirt.
+```
+
+**Kategori:** Kariyer / Beceri Geliştirme
+
+**Kullanım Amacı:** Öğrenciler için somut hedefli, haftalık bir gelişim planı oluşturmak.
+
+**Örnek Çıktı:**
+> **3 AYLIK BECERİ GELİŞTİRME PLANI — HUKUK ÖĞRENCİSİ**
+>
+> **Ay 1 — Temel İngilizce ve Diksiyon:**
+> - Hafta 1: Günlük 30 dk İngilizce gramer + 15 dk diksiyon egzersizi. Çıktı: Kendini tanıtma videosu (İngilizce)
+> - Hafta 2: Hukuki terimler (İngilizce-Türkçe) kartları. Günde 10 terim. Çıktı: 70 terim ezberlendi
+> - Hafta 3: TED Talks izle + not al. Çıktı: 4 TED konuşması notlandı
+> - Hafta 4: B1 seviye deneme sınavı. Çıktı: Seviye tespiti ve eksikler listesi
+>
+> **Ay 2 — Hukuki Yazma ve Araştırma:**
+> - Hafta 5: Dilekçe yazma teknikleri. Çıktı: Örnek dilekçe
+> - Hafta 6: Makale özetleme. Çıktı: 2 hukuk makalesi özeti
+> - Hafta 7: Dava dosyası inceleme. Çıktı: Vaka özeti
+> - Hafta 8: Sertifika: Adalet Bakanlığı online eğitimi. Çıktı: Sertifika alındı
+>
+> **Ay 3 — Staj Hazırlığı:**
+> - Hafta 9-12: CV ve ön yazı hazırlığı, staj başvuruları. Mülakat provası.
+> - Çıktı: 5 staj başvurusu, güncellenmiş CV
+
+---
+
+### Prompt 39: Not Alma ve Özet Çıkarma
+
+**Prompt:**
+```
+Aşağıdaki metni etkili not alma yöntemiyle (Cornell yöntemi) özetle. Metin:
+
+"Pazarlama karması (4P), bir ürünün pazara başarıyla sunulması için gerekli dört temel unsuru ifade eder. Product (ürün), müşteri ihtiyacını karşılayan fiziksel veya dijital varlıktır. Price (fiyat), ürünün değerini yansıtan parasal karşılıktır. Place (dağıtım), ürünün hedef kitleye ulaştırılma kanallarıdır. Promotion (tutundurma), ürünün tanıtımı ve müşteriyle iletişimidir. 4P'nin doğru kombinasyonu, başarılı pazarlama stratejisinin temelidir."
+
+Özeti şu formatta yaz: Anahtar Kavramlar, Ana Notlar (kısa cümlelerle), Özet (bir paragraf), Çalışma Soruları (3 adet).
+```
+
+**Kategori:** Kariyer / Kişisel Gelişim
+
+**Kullanım Amacı:** Cornell not alma yöntemiyle ders veya makale notları çıkarmak.
+
+**Örnek Çıktı:">
+
+**Prompt:**
+```
+Aşağıdaki metni etkili not alma yöntemiyle (Cornell yöntemi) özetle. Metin:
+
+"Pazarlama karması (4P), bir ürünün pazara başarıyla sunulması için gerekli dört temel unsuru ifade eder. Product (ürün), müşteri ihtiyacını karşılayan fiziksel veya dijital varlıktır. Price (fiyat), ürünün değerini yansıtan parasal karşılıktır. Place (dağıtım), ürünün hedef kitleye ulaştırılma kanallarıdır. Promotion (tutundurma), ürünün tanıtımı ve müşteriyle iletişimidir. 4P'nin doğru kombinasyonu, başarılı pazarlama stratejisinin temelidir."
+
+Özeti şu formatta yaz: Anahtar Kavramlar, Ana Notlar (kısa cümlelerle), Özet (bir paragraf), Çalışma Soruları (3 adet).
+```
+
+**Kategori:** Kişisel Çalışma / Not Alma
+
+**Kullanım Amacı:** Cornell not alma yöntemiyle ders veya makale notları çıkarmak.
+
+**Örnek Çıktı:**
+> **CORNELL NOTLARI: PAZARLAMA KARMASI (4P)**
+>
+> **Anahtar Kavramlar:** Product (ürün), Price (fiyat), Place (dağıtım), Promotion (tutundurma)
+>
+> **Ana Notlar:**
+> - Product: Fiziksel/dijital varlık, müşteri ihtiyacını karşılar
+> - Price: Ürünün parasal değeri, stratejik belirlenir
+> - Place: Dağıtım kanalları, hedef kitleye ulaşma
+> - Promotion: Tutundurma, tanıtım, müşteri iletişimi
+> - 4P uyumu = başarılı pazarlama stratejisi
+>
+> **Özet (1 paragraf):**
+> Pazarlama karması, bir ürünün pazara sunulması için dört temel unsuru kapsar: ürün, fiyat, dağıtım ve tutundurma. Bu dört unsurun uyumlu kombinasyonu, etkili bir pazarlama stratejisinin bel kemiğidir.
+>
+> **Çalışma Soruları:**
+> 1. 4P'den hangisi bir ürünün fiziksel özelliklerini kapsar?
+> 2. Fiyatlandırma stratejisi bir ürünün algılanan değerini nasıl etkiler?
+> 3. Bir dijital ürün için Place (dağıtım) hangi kanalları içerebilir?
+
+---
+
+### Prompt 40: Hafıza Teknikleri ile Kodlama
+
+**Prompt:**
+```
+Aşağıdaki bilgileri hafıza teknikleri (akrostiş, hikâyeleştirme, kelime oyunu, lokus yöntemi) kullanarak ezberlenebilir hale getir. Bilgiler: İnsan sindirim sistemi organları sıralaması — Ağız → Yutak → Yemek Borusu → Mide → İnce Bağırsak → Kalın Bağırsak → Anüs. Anahtar kavramları al, akılda kalıcı bir kodlama oluştur ve açıkla.
+```
+
+**Kategori:** Kişisel Çalışma / Hafıza Teknikleri
+
+**Kullanım Amacı:** Ezberlenmesi zor listeleri hafıza teknikleriyle kalıcı hale getirmek.
+
+**Örnek Çıktı:**
+> **Sindirim Sistemi Sıralaması — Kodlama Teknikleri**
+>
+> **1. Akrostiş (İlk Harflerden Cümle):**
+> Ağız → Yutak → Yemek Borusu → Mide → İnce Bağırsak → Kalın Bağırsak → Anüs
+>
+> Kod: **AY-YA Mİ KA AN** → **AYşe Yemek Ye, Mİsafir KAldı, ANne**
+> *Hikâye:* Ayşe yemek yiyor, bir misafir geldi ve annesi karşıladı.
+>
+> **2. Lokus (Mekân Yöntemi):**
+> Mutfağında gezindiğini düşün:
+> - Kapı (Ağız) → Giriş
+> - Koridor (Yutak) → Geçiş
+> - Borular (Yemek Borusu) → Evin alt yapısı
+> - Oturma odası (Mide) → Geniş alan, karıştırma
+> - Mutfak tezgâhı (İnce Bağırsak) → İşlemler burada
+> - Buzdolabı (Kalın Bağırsak) → Depolama
+> - Çöp kovası (Anüs) → Atık çıkışı
+>
+> **3. Kelime Oyunu:**
+> \"Ağzından Yutarken Yemek Mideye İner, Kalın bağırsağa geçer, Anüsten çıkar.\"
+
+---
+
+## 🧠 KATEGORİ 5: Kişisel Çalışma
+
+---
+
+### Prompt 41: Zaman Yönetimi Planı Oluşturma
+
+**Prompt:**
+```
+Bir üniversite öğrencisi için haftalık zaman yönetimi planı hazırla. Ders programı: Pazartesi 09:00-16:00 (4 ders), Salı 10:00-15:00 (3 ders), Çarşamba boş, Perşembe 09:00-12:00 (2 ders), Cuma 13:00-17:00 (2 ders). Sınav haftasına 3 hafta var. Haftada 20 saat ders çalışma hedefi. Pomodoro tekniği kullan. Boş zaman, spor, sosyalleşme de olsun. Gün gün plan yap.
+```
+
+**Kategori:** Kişisel Çalışma / Zaman Yönetimi
+
+**Kullanım Amacı:** Ders, çalışma ve sosyal hayat dengesini kuran haftalık program hazırlamak.
+
+**Örnek Çıktı:**
+> **HAFTALIK ZAMAN YÖNETİMİ PLANI (Sınav Öncesi 3 Hafta)**
+>
+> **Pazartesi (Ders 09:00-16:00):**
+> - 16:30-18:00: Pomodoro × 2 (Tekrar: bugünkü dersler)
+> - 18:00-19:00: Spor / yürüyüş
+> - 20:00-21:00: Soru çözümü
+>
+> **Salı (Ders 10:00-15:00):**
+> - 15:30-17:00: Grup çalışması
+> - 17:30-19:00: Pomodoro × 2 (Konu anlatımı videosu)
+> - Akşam: Serbest
+>
+> **Çarşamba (Boş Gün — En Verimli Gün):**
+> - 09:00-12:00: Uzun çalışma bloku (3 Pomodoro: en zor konu)
+> - 12:00-13:30: Öğle arası
+> - 13:30-16:00: Soru çözümü + deneme
+> - 16:30-18:00: Hobi / sosyalleşme
+>
+> **Perşembe (Ders 09:00-12:00):**
+> - 13:00-15:00: Pomodoro × 2 (Ödev)
+> - 15:30-17:00: Tekrar
+>
+> **Cuma (Ders 13:00-17:00):**
+> - 10:00-12:00: Pomodoro × 2 (Haftalık tekrar)
+> - 17:30-19:00: Spor
+> - Akşam: Arkadaşlar/aile
+>
+> **Hafta Sonu:**
+> - Cumartesi: 2 × 90 dk çalışma + 1 deneme sınavı
+> - Pazar: 1 × 90 dk çalışma + tam dinlenme
+>
+> **Toplam:** ~20 saat çalışma ✅
+
+---
+
+### Prompt 42: Ders Çalışma Planı (Pomodoro Tekniği)
+
+**Prompt:**
+```
+Bir öğrencinin \"Kalkülüs 2\" dersine çalışması için Pomodoro tekniğine dayalı bir çalışma planı yap. Konular: İntegral (belirli, belirsiz), Trigonometrik integraller, Kısmi integrasyon. Toplam çalışma süresi: 6 saat. Pomodoro (25 dk çalışma + 5 dk mola) kullanılacak. Her çalışma bloğu arasında 15 dk uzun mola olacak. Planı adım adım yaz: her blokta hangi konu çalışılacak, molalarda ne yapılmalı.
+```
+
+**Kategori:** Kişisel Çalışma / Pomodoro
+
+**Kullanım Amacı:** Pomodoro tekniğiyle yoğun ve verimli ders çalışma planı hazırlamak.
+
+**Örnek Çıktı:**
+> **6 SAATLİK KALKÜLÜS 2 ÇALIŞMA PLANI (POMODORO)**
+>
+> **Blok 1 (25 dk) — Belirli İntegral Temelleri**
+> - Riemann toplamı, temel teorem
+> *Mola (5 dk): Ayağa kalk, su iç, 10 kez derin nefes*
+>
+> **Blok 2 (25 dk) — Belirsiz İntegral**
+> - Temel integral formülleri, değişken değiştirme
+> *Mola (5 dk): Gözleri kapat, boyun egzersizi*
+>
+> **Blok 3 (25 dk) — Soru Çözümü (Belirli + Belirsiz)**
+> - 5 soru çöz, zorlandığın yerleri işaretle
+> *Uzun Mola (15 dk): Yürüyüş, atıştırmalık*
+>
+> **Blok 4 (25 dk) — Trigonometrik İntegraller**
+> - sin²x, cos²x dönüşümleri, özel durumlar
+> *Mola (5 dk)*
+>
+> **Blok 5 (25 dk) — Trigonometrik İntegral Soruları**
+> - 5 soru (artan zorluk)
+> *Mola (5 dk)*
+>
+> **Blok 6 (25 dk) — Kısmi İntegrasyon**
+> - ∫u·dv = u·v - ∫v·du, LIATE kuralı
+> *Uzun Mola (15 dk)*
+>
+> **Blok 7 (25 dk) — Kısmi İntegrasyon Soruları**
+> - 4 karmaşık soru
+> *Mola (5 dk)*
+>
+> **Blok 8 (25 dk) — Karma Tekrar ve Eksik Listesi**
+> - Zorlandığın konuları not al, sonraki çalışma için plan
+>
+> **Toplam: 6 saat (200 dk çalışma + 100 dk mola)**
+
+---
+
+### Prompt 43: Aktif Okuma Stratejisi
+
+**Prompt:**
+```
+Aktif okuma yöntemlerini (SQ3R, PQ4R, OK4R) karşılaştıran bir özet çıkar. Her yöntemin adımlarını açıkla. Bir örnek metin paragrafı üzerinde her yöntemi uygulayarak farkı göster. Hangi ders tipi için hangi yöntemin daha uygun olduğunu belirt (sayısal, sözel, yabancı dil). Öğrencilere öneriler ekle.
+```
+
+**Kategori:** Kişisel Çalışma / Okuma Stratejisi
+
+**Kullanım Amacı:** Farklı ders türlerine uygun aktif okuma yöntemini seçmek.
+
+**Örnek Çıktı:**
+> **AKTİF OKUMA YÖNTEMLERİ KARŞILAŞTIRMASI**
+>
+> **SQ3R (Survey-Question-Read-Recite-Review)**
+> - Göz at → Soru oluştur → Oku → Anlat → Tekrar et
+> - *En uygun:* Sözel dersler (Tarih, Edebiyat, Hukuk)
+>
+> **PQ4R (Preview-Question-Read-Reflect-Recite-Review)**
+> - Ön izle → Soru → Oku → Yansıt → Anlat → Tekrar
+> - *En uygun:* Sayısal + sözel karışık dersler (İktisat, Psikoloji)
+>
+> **OK4R (Overview-Key Ideas-Read-Recall-Reflect-Review)**
+> - Genel bakış → Anahtar fikirler → Oku → Hatırla → Yansıt → Tekrar
+> - *En uygun:* Yabancı dil metinleri, makaleler
+>
+> **Örnek Uygulama:** Metin: \"Sindirim sistemi...\"
+> - SQ3R: Başlığa bak → \"Sindirim nedir?\" → Oku → Anlat (kendi cümlelerinle) → Notları tekrar et
+> - PQ4R: Şekillere bak (ön izle) → Soru sor → Oku → Kendi hayatınla bağlantı kur → Anlat → Gözden geçir
+> - OK4R: Başlık, alt başlıklar → Kalın yazılmış terimler → Oku → Gözlerini kapatıp hatırla → Düşün → Hızlı tekrar
+
+---
+
+### Prompt 44: Ezber Kartları (Flashcard) Hazırlama
+
+**Prompt:**
+```
+Biyoloji dersi \"Hücre Bölünmesi\" konusu için 10 adet ezber kartı (flashcard) hazırla. Her kartta: Ön yüz (soru/kavram), Arka yüz (cevap/açıklama). Örnek: Ön: \"Mitoz bölünme sonucu kaç hücre oluşur?\" Arka: \"2 diploid hücre.\" Kartlar şu kavramları kapsamalı: mitoz, mayoz, kromozom, sentromer, iğ iplikleri, sitokinez, interfaz, crossing-over, haploid, diploid.
+```
+
+**Kategori:** Kişisel Çalışma / Flashcard
+
+**Kullanım Amacı:** Ezber gerektiren konular için flashcard seti hazırlamak.
+
+**Örnek Çıktı:**
+> **FLASHCARD SETİ: HÜCRE BÖLÜNMESİ**
+>
+> **Kart 1**
+> Ön: Mitoz bölünme sonucu kaç hücre oluşur?
+> Arka: 2 diploid (2n) hücre. Genetik yapı aynıdır.
+>
+> **Kart 2**
+> Ön: Mayoz bölünme sonucu kaç hücre oluşur?
+> Arka: 4 haploid (n) hücre. Genetik çeşitlilik vardır.
+>
+> **Kart 3**
+> Ön: İnterfaz nedir?
+> Arka: Bölünme öncesi hazırlık evresi. DNA replikasyonu burada olur. G1, S (sentez), G2 olmak üzere 3 aşaması vardır.
+>
+> **Kart 4**
+> Ön: Crossing-over nedir ve hangi evrede olur?
+> Arka: Homolog kromozomların gen alışverişi yapması. Mayoz I, Profaz I evresinde gerçekleşir.
+>
+> **Kart 5**
+> Ön: Haploid ve diploid arasındaki fark nedir?
+> Arka: Haploid (n): 1 kromozom seti. Diploid (2n): 2 kromozom seti. İnsan: 2n=46 (diploid), üreme hücreleri: n=23 (haploid).
+>
+> [...5 kart daha...]
+
+---
+
+### Prompt 45: Sınav Stresi Yönetimi Rehberi
+
+**Prompt:**
+```
+Bir öğrencinin sınav kaygısını yönetmesi için adım adım bir rehber yaz. Rehber şu bölümleri içermeli: Sınav öncesi (1 hafta kala), Sınav günü, Sınav sırasında (anlık kaygı yönetimi), Sınav sonrası. Her bölümde somut teknikler ver: nefes egzersizleri, olumlama cümleleri, beslenme önerileri, odaklanma taktikleri. Bilimsel olarak kanıtlanmış yöntemler kullan (bilişsel yeniden yapılandırma, 4-7-8 nefes tekniği, progresif kas gevşetme). Dil samimi ve motivesi yüksek olsun.
+```
+
+**Kategori:** Kişisel Çalışma / Sınav Stresi
+
+**Kullanım Amacı:** Sınav kaygısını azaltmak için bilimsel tekniklerle hazırlanmış bir rehber oluşturmak.
+
+**Örnek Çıktı:**
+> **SINAV KAYGISI YÖNETİM REHBERİ**
+>
+> **Sınav Öncesi (1 Hafta Kala):**
+> - Bilişsel yeniden yapılandırma: \"Ya başaramazsam\" → \"Elimden geleni yapıyorum, bu yeterli\"
+> - Çalışma planını son günlere bırakma — son 2 gün tekrar amaçlı olsun
+> - Uyku düzeni: Her gece en az 7 saat
+> - Beslenme: Kafeini azalt, magnezyum al (ceviz, badem, muz)
+>
+> **Sınav Günü:**
+> - Hafif kahvaltı (protein + kompleks karbonhidrat: yumurta, tam buğday ekmeği)
+> - 4-7-8 nefes tekniği: 4 sn nefes al → 7 sn tut → 8 sn ver (3 kez tekrar)
+> - Kendine şunu söyle: \"Ben hazırım, bildiklerimi göstereceğim\"
+>
+> **Sınav Sırasında (Anlık Kaygı):**
+> 1. Dur ve 3 saniye nefes al
+> 2. Şimdiki ana odaklan (anda kal, geçmişe/geleceğe gitme)
+> 3. Progresif kas gevşetme: Ayak parmaklarını sık → 5 sn bekle → bırak (sırasıyla bacak, karın, omuz)
+> 4. Takıldığın soruyu geç, kolay soruya dön
+>
+> **Sınav Sonrası:**
+> - Kendini eleştirme: \"Yanlışım çok\" yerine \"Şu konulara daha çok çalışmalıyım\"
+> - Sonraki sınava kadar 1 gün tam dinlenme
+
+---
+
+### Prompt 46: Ders Notlarını Dijitalleştirme
+
+**Prompt:**
+```
+Bir öğrencinin el yazısı ders notlarını dijital ortama aktarması için adım adım bir iş akışı hazırla. Kullanılabilecek araçlar: Notion, OneNote, Obsidian, Google Docs. Öneri: hangi aracın hangi amaç için daha iyi olduğunu karşılaştır. Dijital not almada altın kurallar: etiketleme, bağlantı kurma, görsel ekleme, düzenli klasörleme. Her kuralı bir örnekle açıkla.
+```
+
+**Kategori:** Kişisel Çalışma / Dijital Not
+
+**Kullanım Amacı:** El yazısı notları düzenli dijital notlara dönüştürmek.
+
+**Örnek Çıktı:**
+> **DERS NOTLARINI DİJİTALE TAŞIMA REHBERİ**
+>
+> **Araç Karşılaştırması:**
+> | Araç | En İyi Olduğu Alan | Zayıf Yönü |
+> |------|-------------------|------------|
+> | Notion | Veritabanı, takvim, ilişkisel notlar | Çevrimdışı kısıtlı |
+> | OneNote | El yazısı tanıma, çizim | Klasör yapısı karışık |
+> | Obsidian | Bağlantılı düşünce, grafik görünüm | Kurulum gerektirir |
+> | Google Docs | Paylaşım, iş birliği | Büyük notlar için yavaş |
+>
+> **Altın Kurallar:**
+> 1. Etiketle: Her nota konu, ders, tarih etiketi ekle. Örn: #Kalkülüs2 #İntegral
+> 2. Bağlantı kur: Bir nottan diğerine link ver. Örn: [[Türev Kuralları]] ile bağlantılı
+> 3. Görsel ekle: Grafik, diyagram, fotoğraf ekle. Görsel hafızayı destekler
+> 4. Düzenli klasör: Ders > Hafta > Konu hiyerarşisi kullan
+
+---
+
+### Prompt 47: Deneme Sınavı Analiz Raporu
+
+**Prompt:**
+```
+Bir deneme sınavı sonucunu analiz eden bir rapor yaz. Sonuçlar: Matematik 12/20 doğru, Türkçe 15/20, Fen 10/20, Sosyal 16/20. Hedef: TYT'de 85+ net. Analiz şunları içermeli: Net dağılımı, Yanlışların konu analizi (hangi konularda yanlış yapılmış), Eksik konu listesi, Çalışma öncelik sırası. Her ders için ayrı ayrı yap. Öneriler: sonraki 2 hafta için odaklanılması gereken konular.
+```
+
+**Kategori:** Kişisel Çalışma / Deneme Analizi
+
+**Kullanım Amacı:** Deneme sınavı sonuçlarını analiz ederek stratejik çalışma planı oluşturmak.
+
+**Örnek Çıktı:**
+> **DENEME SINAVI ANALİZ RAPORU**
+>
+> **Genel Durum:** 53/80 net (Hedef: 85 → 32 net artış gerekli)
+>
+> | Ders | Doğru | Yanlış | Net | Başarı % |
+> |------|-------|--------|-----|----------|
+> | Matematik | 12 | 8 | 10 | %60 |
+> | Türkçe | 15 | 5 | 14 | %75 |
+> | Fen | 10 | 10 | 8 | %50 |
+> | Sosyal | 16 | 4 | 15 | %80 |
+>
+> **Matematik — Konu Analizi:**
+> - Problemler: 3 yanlış (en zayıf alan)
+> - Geometri: 2 yanlış
+> - Sayılar: 1 yanlış (işlem hatası)
+> - Cebir: 2 yanlış
+> *Öncelik:* Problemlerde hız kazanma, geometri formülleri
+>
+> **Fen — Konu Analizi:**
+> - Fizik (Optik): 3 yanlış
+> - Kimya (Kimyasal hesaplamalar): 4 yanlış
+> - Biyoloji (Sindirim sistemi): 3 yanlış
+> *Öncelik:* Kimyasal hesaplamalar ve optik
+>
+> **Önümüzdeki 2 Hafta İçin Strateji:**
+> - Hafta 1: Problemler (günde 15 soru) + Optik (konu anlatımı + 20 soru)
+> - Hafta 2: Kimyasal hesaplamalar (konu tekrarı) + Türkçe paragraf (günde 10 soru)
+> - Hedef: 53 → 65 net
+
+---
+
+### Prompt 48: Akademik Okuma Listesi Oluşturma
+
+**Prompt:**
+```
+Bir psikoloji bölümü 1. sınıf öğrencisi için dönem boyunca okunacak 5 kitap ve 5 makale öner. Konu: Sosyal psikoloji. Kitaplar: popüler bilimden başla akademik kitaplara doğru ilerle. Makaleler: güncel ve klasik makaleleri dengeli seç. Her kaynağın: Neden okunmalı?, Kaç günde bitirilmeli?, Okuma stratejisi (göz at, derin oku, not al) bilgilerini ekle. Öncelik sırasına göre sırala.
+```
+
+**Kategori:** Kişisel Çalışma / Okuma Listesi
+
+**Kullanım Amacı:** Akademik bir ders için yapılandırılmış okuma listesi hazırlamak.
+
+**Örnek Çıktı:**
+> **SOSYAL PSİKOLOJİ OKUMA LİSTESİ**
+>
+> **1. Kitaplar:**
+>
+> 1. 🥇 *Sosyal Psikoloji* — David Myers (Temel ders kitabı, 3 hafta)
+>    *Strateji:* Haftada 2 bölüm, her bölüm sonunda soru çöz
+>
+> 2. 🥈 *İtaatsizlik Üzerine* — Erich Fromm (Klasik, 1 hafta)
+>    *Strateji:* Derin oku, her bölümü özetle
+>
+> 3. 🥉 *Kalabalıklar* — Gustave Le Bon (Klasik, 1 hafta)
+>    *Strateji:* Göz at + önemli kısımları not al
+>
+> **2. Makaleler:**
+>
+> 1. 🥇 Milgram (1963) — *İtaat Deneyi* (Klasik, 2 gün)
+>    *Önem:* Sosyal psikolojinin kurucu deneyleri
+>
+> 2. 🥈 Zimbardo (1971) — *Stanford Hapishane Deneyi* (Klasik, 2 gün)
+>    *Önem:* Durumsal güç, otorite
+>
+> 3. 🥉 Güncel bir makale (2023+) — Sosyal medya etkisi (3 gün)
+>    *Önem:* Alanın güncel yönelimi
+
+---
+
+### Prompt 49: Öz Değerlendirme — Akademik Rapor
+
+**Prompt:**
+```
+Bir dönem sonu öz değerlendirme raporu yaz. Öğrenci 2. sınıf, 5 ders aldı: Pazarlama (AA), İstatistik (BA), Muhasebe (CB), İktisat (CC), Hukuk (BB). Rapor: Dönem hedefleri, başarılanlar, zorlanılan dersler, eksikler ve gelecek dönem planı. Her ders için ayrı not: hangi strateji işe yaradı, hangisi yaramadı. GANO: 3.20. Gelecek dönem hedef: 3.50.
+```
+
+**Kategori:** Kişisel Çalışma / Öz Değerlendirme
+
+**Kullanım Amacı:** Dönem sonunda akademik performansı analiz ederek gelecek dönem stratejisi belirlemek.
+
+**Örnek Çıktı:**
+> **DÖNEM SONU ÖZ DEĞERLENDİRME RAPORU**
+>
+> **Dönem Hedefleri:** GANO 3.30, tüm derslerden BB ve üzeri
+> **Gerçekleşen:** GANO 3.20, 3 ders BB ve üzeri, 2 ders CC/CB
+>
+> **Ders Bazlı Analiz:**
+> - Pazarlama (AA): Proje tabanlı çalışma işe yaradı; vaka analizleri + düzenli not
+> - İstatistik (BA): Bol soru çözümü stratejisi başarılı
+> - Muhasebe (CB): Ezber yerine mantığı kavrayamadım; gelecek dönem daha çok pratik yapmalıyım
+> - İktisat (CC): En zorlandığım ders; grafik okuma zayıf; düzenli tekrar gerek
+> - Hukuk (BB): Okuma + özet stratejisi yeterliydi
+>
+> **Eksikler:** Zaman yönetimi (son haftalara yığıldı), İktisat temel kavramlar
+>
+> **Gelecek Dönem Planı:**
+> - Hedef GANO: 3.50
+> - Strateji: Haftalık tekrar, en zor derse her gün 30 dk
+> - Önlem: Son hafta yığılmasını önlemek için 2 haftada bir küçük deneme
+
+---
+
+### Prompt 50: Dijital Minimalizm ve Odaklanma Rehberi
+
+**Prompt:**
+```
+Bir üniversite öğrencisi için dijital minimalizm ve odaklanma rehberi yaz. Sorun: Telefon bağımlılığı, sosyal medyada zaman kaybı, ders çalışırken dikkat dağınıklığı. Çözüm önerileri: Dijital detoks günü, ekran süresi sınırlama, uygulama bloklama (Freedom/Forest), bildirim kapatma, belirli saatlerde e-posta/sosyal medya kontrolü. Her öneriyi bilimsel bir gerekçeyle destekle. 1 haftalık uygulama planı ekle.
+```
+
+**Kategori:** Kişisel Çalışma / Dijital Verimlilik
+
+**Kullanım Amacı:** Dijital dikkat dağınıklığını azaltarak ders çalışma verimliliğini artırmak.
+
+**Örnek Çıktı:**
+> **DİJİTAL MİNİMALİZM REHBERİ — ODAKLANMAK İÇİN 7 GÜN**
+>
+> **Bilimsel Arka Plan:**
+> Araştırmalar, bir işten diğerine geçişin (task switching) verimliliği %40'a kadar düşürdüğünü göstermektedir. Her bildirim, dikkatinizin toparlanması için 23 dakika gerektirir (UC Irvine). Bu rehber, bu sorunları çözmek için tasarlanmıştır.
+>
+> **1 Haftalık Uygulama Planı:**
+>
+> **Pazartesi — Farkındalık Günü**
+> - Telefon ekran süresi raporunu al → Ortalama süreyi öğren
+> - En çok zaman harcadığın 3 uygulamayı belirle
+> - Eylem: Bildirimleri %50 azalt (gereksiz olanları kapat)
+>
+> **Salı — Düzenleme Günü**
+> - Ana ekrandan sosyal medya uygulamalarını kaldır
+> - Forest veya Freedom uygulamasını kur → çalışma süresince aktif et
+> - Eylem: Günde 3 kez belirli saatlerde sosyal medya kontrolü (10:00, 14:00, 18:00)
+>
+> **Çarşamba — Kısıtlama Günü**
+> - Günlük ekran süresi hedefi: 3 saat
+> - Çalışma sırasında telefonu başka odada bırak
+> - Eylem: Pomodoro çalışırken telefona kesinlikle bakma
+>
+> **Perşembe — Derin Çalışma Günü**
+> - Sabah ilk 2 saat: hiçbir dijital uyarana maruz kalma (e-posta, sosyal medya yok)
+> - Tek görev yap (multitasking yasak)
+>
+> **Cuma — Dijital Detox (Yarım Gün)**
+> - 12:00'a kadar telefon kapalı
+> - Not almak için kağıt kalem kullan
+>
+> **Hafta Sonu — Değerlendirme**
+> - Haftalık ekran süresini pazartesiyle karşılaştır
+> - En işe yarayan yöntemi not et
+> - Minimalist dijital alışkanlıkları kalıcı hale getir
+
+---
+
+*Hazırlayan: AI Prompt Pack — Öğrenciler ve Akademisyenler İçin — 50 Prompt*

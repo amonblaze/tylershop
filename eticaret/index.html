@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TylerShop — E-Ticaret Açıklama Üretici</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>📝</text></svg>" />
+</head>
+<body>
+
+  <!-- ===== HEADER / HERO ===== -->
+  <header class="hero">
+    <div class="container">
+      <h1>Tyler<span class="accent">Shop</span></h1>
+      <p class="subtitle">Yapay Zeka ile Profesyonel Ürün Açıklamaları</p>
+      <p class="desc">DeepSeek destekli SEO uyumlu, satış odaklı ürün açıklamalarını saniyeler içinde oluşturun.</p>
+      <button class="btn btn-primary btn-lg" id="heroCta">Hemen Dene →</button>
+    </div>
+  </header>
+
+  <!-- ===== PRICING ===== -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <h2>Fiyatlandırma</h2>
+      <div class="pricing-grid">
+        <div class="card card-free">
+          <div class="card-badge">Başlangıç</div>
+          <h3>Deneme</h3>
+          <p class="price">3 Kullanım</p>
+          <p class="price-tl">Ücretsiz</p>
+          <ul>
+            <li>✓ 3 ürün açıklaması</li>
+            <li>✓ SEO uyumlu metin</li>
+            <li>✓ Kopyala / düzenle</li>
+          </ul>
+          <button class="btn btn-outline" onclick="document.getElementById('app-section').scrollIntoView({behavior:'smooth'})">Başla</button>
+        </div>
+        <div class="card card-popular">
+          <div class="card-badge">Popüler</div>
+          <h3>Mini Paket</h3>
+          <p class="price">50 Ürün</p>
+          <p class="price-tl">99 TL</p>
+          <ul>
+            <li>✓ 50 ürün açıklaması</li>
+            <li>✓ Toplu CSV yükleme</li>
+            <li>✓ CSV indir</li>
+            <li>✓ Öncelikli destek</li>
+          </ul>
+          <button class="btn btn-primary" onclick="showPurchase('mini')">Satın Al</button>
+        </div>
+        <div class="card">
+          <div class="card-badge">Fırsat</div>
+          <h3>Pro Paket</h3>
+          <p class="price">200 Ürün</p>
+          <p class="price-tl">249 TL</p>
+          <ul>
+            <li>✓ 200 ürün açıklaması</li>
+            <li>✓ Toplu CSV yükleme</li>
+            <li>✓ CSV indir</li>
+            <li>✓ Öncelikli destek</li>
+          </ul>
+          <button class="btn btn-outline" onclick="showPurchase('pro')">Satın Al</button>
+        </div>
+        <div class="card">
+          <div class="card-badge">Sınırsız</div>
+          <h3>Ultra Paket</h3>
+          <p class="price">Sınırsız</p>
+          <p class="price-tl">499 TL / ay</p>
+          <ul>
+            <li>✓ Sınırsız ürün açıklaması</li>
+            <li>✓ Toplu CSV yükleme</li>
+            <li>✓ CSV indir</li>
+            <li>✓ Öncelikli destek</li>
+          </ul>
+          <button class="btn btn-outline" onclick="showPurchase('ultra')">Satın Al</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== APP SECTION ===== -->
+  <section class="section app-section" id="app-section">
+    <div class="container">
+      <h2>Ürün Açıklamanı Oluştur</h2>
+
+      <!-- Tab Switch: Single / Batch -->
+      <div class="tab-bar">
+        <button class="tab-btn active" data-tab="single" id="tabSingle">Tek Ürün</button>
+        <button class="tab-btn" data-tab="batch" id="tabBatch">Toplu CSV</button>
+      </div>
+
+      <!-- ===== SINGLE MODE ===== -->
+      <div class="tab-content active" id="singleTab">
+        <div class="form-group">
+          <label for="productName">Ürün Adı</label>
+          <input type="text" id="productName" placeholder="Örn: Deri Cüzdan, El Yapımı Mum..." />
+        </div>
+        <div class="form-group">
+          <label for="productCategory">Kategori</label>
+          <select id="productCategory">
+            <option value="">Seçiniz...</option>
+            <option value="Aksesuar">Aksesuar</option>
+            <option value="Elektronik">Elektronik</option>
+            <option value="Ev &amp; Yaşam">Ev &amp; Yaşam</option>
+            <option value="Giyim">Giyim</option>
+            <option value="Kozmetik">Kozmetik</option>
+            <option value="Spor">Spor</option>
+            <option value="Oyuncak">Oyuncak</option>
+            <option value="Kitap">Kitap</option>
+            <option value="Mutfak">Mutfak</option>
+            <option value="Diğer">Diğer</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="productFeatures">Öne Çıkan Özellikler (isteğe bağlı, virgülle ayırın)</label>
+          <input type="text" id="productFeatures" placeholder="Örn: Su geçirmez, 5 yıl garanti, Paslanmaz çelik" />
+        </div>
+        <div class="form-group">
+          <label for="toneSelect">Ton / Stil</label>
+          <select id="toneSelect">
+            <option value="profesyonel">Profesyonel</option>
+            <option value="samimi">Samimi / Sıcak</option>
+            <option value="lüks">Lüks / Premium</option>
+            <option value="genç">Genç / Enerjik</option>
+          </select>
+        </div>
+        <button class="btn btn-primary" id="generateBtn">🚀 Açıklama Üret</button>
+
+        <div id="loadingIndicator" class="loading hidden">
+          <div class="spinner"></div>
+          <p>DeepSeek yapay zeka açıklamanızı oluşturuyor...</p>
+        </div>
+
+        <div id="resultArea" class="result-area hidden">
+          <div class="result-header">
+            <h3>Oluşturulan Açıklama</h3>
+            <div class="result-actions">
+              <button class="btn btn-sm btn-outline" id="copyBtn">📋 Kopyala</button>
+              <button class="btn btn-sm btn-outline" id="regenerateBtn">🔄 Yeniden Üret</button>
+            </div>
+          </div>
+          <div id="resultText" class="result-text" contenteditable="true"></div>
+          <div id="seoPreview" class="seo-preview hidden">
+            <h4>SEO Önizleme</h4>
+            <div id="seoTitle" class="seo-title"></div>
+            <div id="seoDesc" class="seo-desc"></div>
+          </div>
+        </div>
+
+        <div id="usageCounter" class="usage-info">
+          <span>Kullanım: </span><strong id="usageCount">0</strong> / <strong id="usageLimit">3</strong> ücretsiz
+          <span id="usageRemaining" class="usage-remaining"></span>
+        </div>
+      </div>
+
+      <!-- ===== BATCH MODE ===== -->
+      <div class="tab-content" id="batchTab">
+        <div class="batch-info">
+          <p><strong>CSV Formatı:</strong> İlk sütun <code>ürün_adı</code>, ikinci sütun <code>kategori</code> (isteğe bağlı).</p>
+          <p>Maksimum <strong>50 satır</strong> (başlık hariç).</p>
+          <a href="#" id="sampleCsvLink" class="link">📄 Örnek CSV indir</a>
+        </div>
+        <div class="file-upload" id="fileUploadArea">
+          <label for="csvFile" class="upload-label">
+            <span class="upload-icon">📁</span>
+            <span>CSV dosyasını seçin veya sürükleyin</span>
+            <span class="upload-hint">.csv dosyası, UTF-8</span>
+          </label>
+          <input type="file" id="csvFile" accept=".csv" />
+        </div>
+        <div id="csvPreview" class="csv-preview hidden">
+          <h4>Yüklenen Ürünler (<span id="csvCount">0</span>)</h4>
+          <div id="csvTableWrapper" class="table-wrapper"></div>
+          <button class="btn btn-primary" id="batchGenerateBtn">🚀 Tümünü Üret</button>
+          <div id="batchProgress" class="batch-progress hidden">
+            <div id="batchProgressBar" class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <span id="batchProgressText">0 / 0</span>
+          </div>
+        </div>
+        <div id="batchResults" class="batch-results hidden">
+          <div class="result-header">
+            <h3>Toplu Sonuçlar</h3>
+            <button class="btn btn-sm btn-primary" id="downloadCsvBtn">📥 CSV İndir</button>
+          </div>
+          <div id="batchResultTable" class="table-wrapper"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PURCHASE MODAL ===== -->
+  <div id="purchaseModal" class="modal-overlay hidden">
+    <div class="modal">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h2 id="modalTitle">Satın Al</h2>
+      <div class="purchase-details" id="purchaseDetails">
+        <p id="modalPackage"></p>
+        <p class="purchase-amount" id="modalAmount"></p>
+        <hr />
+        <h3>Havale / EFT Bilgileri</h3>
+        <div class="iban-info">
+          <p><strong>Banka:</strong> Ziraat Bankası</p>
+          <p><strong>Alıcı:</strong> Amon Yazılım Tic. Ltd. Şti.</p>
+          <p><strong>IBAN:</strong> <code id="ibanDisplay">TR12 0006 2001 2345 6789 0000 11</code> <button class="btn btn-xs" onclick="copyIBAN()">📋 Kopyala</button></p>
+          <p><strong>Referans Kodu:</strong> <code id="refCode"></code></p>
+        </div>
+        <p class="purchase-note">Ödeme yapıldıktan sonra bize ulaşın veya referans kodunuzu not edin. Krediniz 24 saat içinde tanımlanacaktır.</p>
+        <p class="purchase-contact">📧 <a href="mailto:destek@tylershop.app">destek@tylershop.app</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TOAST ===== -->
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
